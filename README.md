@@ -1,6 +1,6 @@
 <img src="https://i.gifer.com/7V7.gif"></img>
 
-<img src="https://weheartit.com/entry/153504620"></img>
+<img src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true">Processing</img>
 
 ## Welcome to GitHub Pages
 
