@@ -2,6 +2,8 @@
 
 <img src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true">
 
+<img src="https://media.giphy.com/media/3ov9k8fmDbIqzzbsLS/giphy.gif">
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/milesccoleman/ideas/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
