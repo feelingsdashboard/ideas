@@ -1,6 +1,6 @@
-<img src="https://i.gifer.com/7V7.gif"></img>
+<img src="https://i.gifer.com/7V7.gif">
 
-<img src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true"></img>
+<img src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true">
 
 ## Welcome to GitHub Pages
 
