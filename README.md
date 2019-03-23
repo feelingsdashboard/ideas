@@ -8,6 +8,13 @@
 
 https://www.chartjs.org/docs/latest/charts/doughnut.html
 
+https://www.amazon.com/Intel-Ultra-Slim-Compute-Stick-Ubuntu/dp/B014N4I7DK/ref=sr_1_206?qid=1553375690&refinements=p_36%3A-10000&rnid=2421879011&s=pc&sr=1-206
+
+https://www.amazon.com/Bolayu-Portable-Flexible-Silicone-Keyboard/dp/B01GNM3I3O/ref=sr_1_6?keywords=cheap+keyboard&qid=1553375843&s=electronics&sr=1-6
+
+https://facilities.uw.edu/finadmin/movingandsurplus/inventory/item/flat-screen-monitors
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/milesccoleman/ideas/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
