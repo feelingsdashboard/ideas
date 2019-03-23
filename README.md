@@ -4,7 +4,7 @@
 
 <img src="https://media.giphy.com/media/3ov9k8fmDbIqzzbsLS/giphy.gif">
 
-<iframe src="https://www.chartjs.org/docs/latest/charts/doughnut.html#chartjs-4"</iframe>
+<iframe src="https://www.chartjs.org/docs/latest/charts/doughnut.html#chartjs-4">
 
 https://www.chartjs.org/docs/latest/charts/doughnut.html
 
