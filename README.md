@@ -1,4 +1,4 @@
-<img src="https://i.gifer.com/7V7.gif</img>
+<img src="https://i.gifer.com/7V7.gif"</img>
 
 ## Welcome to GitHub Pages
 
