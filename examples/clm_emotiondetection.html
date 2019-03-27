@@ -238,12 +238,37 @@ color: white;
 visibility: hidden; 
 background: orange; 
 }
+#backup {
+visibility: hidden; 
+}
 #footer {
 position: absolute;
 bottom: 8px;
 right: 16px;
 font-size: 8px; 
 color: red; 
+}
+.led-green {
+  margin: 0 auto;
+  width: 45px;
+  height: 45px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+#facedetected {
+	padding; 0; 
+	color: #ABFF00; 
+	font-size: 20px
+}
+#indicator {
+	position: absolute; 
+	right: 25%; 
+	top: 25%; 
+	visibility: hidden; 
+}
+#backupbutton {
+	background-color: rgba(255,255,255,0.6);
 }
 		</style>
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -277,6 +302,11 @@ color: red;
 		<div id="content">
 			<h1>Feelings Dashboard</h1>
 			<h6>Get Advice Based on Your Emotional State</h6>
+			<div id="indicator">
+			<div class="led-green"></div>
+  			<h6 id='facedetected'>Face Detected</h6>
+  			</div>
+  			<div id="backup">
 			<div id="container">
 				<video id="videoel" width="400" height="300" preload="auto" loop playsinline autoplay>
 				</video>
@@ -290,7 +320,7 @@ color: red;
 					<img class="emotion_icon" id="icon4" src="./media/icon_happy.png">
 				</div>
 				<div id='emotion_chart'></div>
-
+			</div>
 			</div>
 							<div id="controls">
 				<input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
@@ -347,9 +377,17 @@ color: red;
 			</div>
 			</li>
 			</ul>
-<div id="footer">
-			<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxdJPu02SeM7C5kGSGbqe0Dm6j_MLazsXLnBuUvx0JsTqksUdksP5bXnWJ3DD3tSKEw2BTX0YdzXMg/pubhtml?gid=0&single=true">Data Spreadsheet</a>
-</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div id="footer">
+				<input class="btn" type="button" value="backup" onclick="showBackup()" id="backupbutton"></input><br>
+				<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxdJPu02SeM7C5kGSGbqe0Dm6j_MLazsXLnBuUvx0JsTqksUdksP5bXnWJ3DD3tSKEw2BTX0YdzXMg/pubhtml?gid=0&single=true">Data Spreadsheet</a>
+			</div>
+
 <script>
 var dt = new Date();
 var utcDate = dt.toUTCString();
@@ -509,6 +547,7 @@ var utcDate = dt.toUTCString();
 					document.getElementById('disgusted').style.visibility = 'hidden';
 					document.getElementById('happy').style.visibility = 'hidden';
 					document.getElementById('fearful').style.visibility = 'hidden';
+					document.getElementById('backup').style.visibility = 'hidden';
 				if (angerFlipped) {
 					card1.classList.toggle('is-flipped');
 					angerFlipped = false; 
@@ -534,6 +573,9 @@ var utcDate = dt.toUTCString();
 					fearFlipped = false; 
 				}
 			}
+			function showBackup() {
+				document.getElementById('backup').style.visibility = 'visible';
+			}
 			</script>
 			<script>
 				function showAnger() {
@@ -554,6 +596,13 @@ var utcDate = dt.toUTCString();
 				function showHappiness() {
 				document.getElementById('happy').style.visibility = 'visible';
 				}
+				function indicateFace() {
+				document.getElementById('indicator').style.visibility = 'visible';
+				}
+				function unIndicateFace(){
+				document.getElementById('indicator').style.visibility = 'hidden';
+				}
+				
 			</script>
 			<script>
 				var vid = document.getElementById('videoel');
@@ -638,6 +687,7 @@ var utcDate = dt.toUTCString();
 					var cp = ctrack.getCurrentParameters();
 					var er = ec.meanPredict(cp);
 					if (er) {
+						indicateFace(); 
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
 							if (er[i].value > 0.4) {
