@@ -687,12 +687,13 @@ var utcDate = dt.toUTCString();
 					var cp = ctrack.getCurrentParameters();
 					var er = ec.meanPredict(cp);
 					if (er) {
-						indicateFace(); 
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
 							if (er[i].value > 0.4) {
+								indicateFace(); 
 								//document.getElementById('icon'+(i+1)).style.visibility = 'visible';
 							} else {
+								unIndicateFace(); 
 								//document.getElementById('icon'+(i+1)).style.visibility = 'hidden';
 							}
 							if (collectData) {
