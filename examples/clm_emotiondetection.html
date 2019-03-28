@@ -529,18 +529,12 @@ var utcDate = dt.toUTCString();
   			getAdvice4(); 
   			disgustFlipped = true; 
 			});
-			
 			var card5 = document.querySelector('#happy');
-			function flipHappiness() {
-  				setTimeout(
-  				() => {
-    				card5.classList.toggle('is-flipped');
-  					getAdvice5();
-  					happinessFlipped = true; 
-  				},
-  				4 * 1000
-				);
-			}  
+			card5.addEventListener( 'click', function() {
+  			card5.classList.toggle('is-flipped');
+  			getAdvice5();
+  			happinessFlipped = true;  
+			});
 			var card6 = document.querySelector('#fearful');
 			card6.addEventListener( 'click', function() {
   			card6.classList.toggle('is-flipped');
@@ -784,7 +778,7 @@ var utcDate = dt.toUTCString();
 								showSurprise(); 
 							}
 							if (er[5].value > 0.4) {
-								showHappiness();
+								showHappiness();  
 							}
 							outputArray.push(er);
 							console.log(outputArray);
@@ -793,6 +787,8 @@ var utcDate = dt.toUTCString();
 							executeGraph();
 						    collectData = false;
 						}
+						}
+					}
 					}
 				var ec = new emotionClassifier();
 				ec.init(emotionModel);
