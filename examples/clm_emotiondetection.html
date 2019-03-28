@@ -541,6 +541,11 @@ var utcDate = dt.toUTCString();
   			getAdvice6();
   			fearFlipped = true;  
 			});
+			function flipHappiness() {
+			card6.classList.toggle('is-flipped');
+  			getAdvice6();
+  			fearFlipped = true; 
+			}
 			
 				function getAdvice() {
 					w3.getHttpObject("https://api.adviceslip.com/advice", function(data){
@@ -778,7 +783,8 @@ var utcDate = dt.toUTCString();
 								showSurprise(); 
 							}
 							if (er[5].value > 0.4) {
-								showHappiness();  
+								showHappiness();
+								flipHappiness();   
 							}
 							outputArray.push(er);
 							console.log(outputArray);
