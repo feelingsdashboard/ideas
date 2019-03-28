@@ -529,11 +529,18 @@ var utcDate = dt.toUTCString();
   			getAdvice4(); 
   			disgustFlipped = true; 
 			});
+			
 			var card5 = document.querySelector('#happy');
 			function flipHappiness() {
-  			card5.classList.toggle('is-flipped');
-  			getAdvice5();
-  			happinessFlipped = true;  
+  				setTimeout(
+  				() => {
+    				card5.classList.toggle('is-flipped');
+  					getAdvice5();
+  					happinessFlipped = true; 
+  				},
+  				4 * 1000
+				);
+			}  
 			}
 			var card6 = document.querySelector('#fearful');
 			card6.addEventListener( 'click', function() {
@@ -779,13 +786,7 @@ var utcDate = dt.toUTCString();
 							}
 							if (er[5].value > 0.4) {
 								showHappiness();
-								setTimeout(
-  									() => {
-    								flipHappiness(); 
-  									},
-  								4 * 1000
-								);
-							}  
+								flipHappiness();
 							}
 							outputArray.push(er);
 							console.log(outputArray);
