@@ -112,14 +112,16 @@ h6 {
 			}
 .scene {
   width: 200px;
-  height: 260px;
+  height: 90px;
   border: 1px solid #CCC;
   margin: 40px 0;
   perspective: 600px;
     border-style: none; 
 
 }
-
+#tarot {
+	margin-top: -35%; 
+}
 .card {
   position: relative;
   width: 100%;
@@ -143,8 +145,8 @@ h6 {
   position: absolute;
   width: 100%;
   height: 100%;
-  line-height: 260px;
   color: white;
+  line-height: 80px; 
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
@@ -166,12 +168,14 @@ h6 {
   transform: rotateY(180deg);
   font-size: 12px;
   border-radius: 15px; 
+  background-color: rgba(0,0,0,0.6);
 }
 #advice, #advice2, #advice3, #advice4, #advice5, #advice6 {
-width: 100px; 
-height: 260px; 
-line-height: 12px;
-margin-left: 10px; 
+margin-top: 10px; 
+width: 200; 
+height: 90; 
+line-height: 17px;
+font-size: 18px;  
 font-family: 'Lato';
 }
 ul {
@@ -180,8 +184,6 @@ ul {
   padding: 0;
 }
 li {
-  display: inline;
-  float: left;
   margin-left: 2px; 
 } 
 #angry {
@@ -226,7 +228,7 @@ visibility : hidden;
 font-family: 'Lato';
 }
 #startbutton {
-visibility: visible; 
+visibility: hidden; 
 background: lightgreen; 
 }
 #startbutton2 {
@@ -354,7 +356,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="angry" class="card">
-    			<div class="card__face">Anger<p id="click">Click me</p></div>
+    			<div class="card__face">Anger<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice"></p></div>
   			</div>
 			</div>
@@ -362,7 +364,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="sad" class="card">
-    			<div class="card__face">Sadness<p id="click">Click me</p></div>
+    			<div class="card__face">Sadness<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice2"></p></div>
   			</div>
 			</div>
@@ -370,7 +372,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="surprised" class="card">
-    			<div class="card__face">Surprise<p id="click">Click me</p></div>
+    			<div class="card__face">Surprise<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice3"></p></div>
   			</div>
 			</div>
@@ -378,7 +380,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="disgusted" class="card">
-    			<div class="card__face">Disgust<p id="click">Click me</p></div>
+    			<div class="card__face">Disgust<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice4"></p></div>
   			</div>
 			</div>
@@ -386,7 +388,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="happy" class="card">
-    			<div class="card__face">Happiness<p id="click">Click me</p></div>
+    			<div class="card__face">Happiness<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice5"></p></div>
   			</div>
 			</div>
@@ -394,7 +396,7 @@ color: red;
 			<li>
 			<div class="scene">
   			<div id="fearful" class="card">
-    			<div class="card__face">Fear<p id="click">Click me</p></div>
+    			<div class="card__face">Fear<p id="click"></p></div>
    				<div class="card__face card__face--back"><p id="advice6"></p></div>
   			</div>
 			</div>
