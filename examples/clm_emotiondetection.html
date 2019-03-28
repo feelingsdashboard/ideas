@@ -701,7 +701,7 @@ var utcDate = dt.toUTCString();
 					if (er) {
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
-							if (er.value > 0.4) {
+							if (er[i].value > 0.4) {
 								indicateFace(); 
 								//document.getElementById('icon'+(i+1)).style.visibility = 'visible';
 							} else {
