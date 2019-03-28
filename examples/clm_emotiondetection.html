@@ -511,9 +511,14 @@ var utcDate = dt.toUTCString();
   			angerFlipped = true;
 			});
 			function flipAnger() {
-			card1.classList.toggle('is-flipped');
-  			getAdvice();
-  			angerFlipped = true; 
+			setTimeout(
+  					() => {
+    				card1.classList.toggle('is-flipped');
+  					getAdvice();
+  					angerFlipped = true;   
+  					},
+  					2 * 1000
+					); 
 			}
 			var card2 = document.querySelector('#sad');
 			card2.addEventListener( 'click', function() {
@@ -522,9 +527,14 @@ var utcDate = dt.toUTCString();
   			sadnessFlipped = true;
 			});
 			function flipSadness() {
-			card2.classList.toggle('is-flipped');
-  			getAdvice2();
-  			sadnesssFlipped = true; 
+			setTimeout(
+  					() => {
+    				card2.classList.toggle('is-flipped');
+  					getAdvice2();
+  					sadnesssFlipped = true;  
+  					},
+  					2 * 1000
+					); 
 			}
 			var card3 = document.querySelector('#surprised');
 			card3.addEventListener( 'click', function() {
@@ -533,9 +543,14 @@ var utcDate = dt.toUTCString();
   			surpriseFlipped = true; 
 			});
 			function flipSurprise() {
-			card5.classList.toggle('is-flipped');
-  			getAdvice3();
-  			surpriseFlipped = true; 
+			setTimeout(
+  					() => {
+    				card5.classList.toggle('is-flipped');
+  					getAdvice3();
+  					surpriseFlipped = true;   
+  					},
+  					2 * 1000
+					);
 			}
 			var card4 = document.querySelector('#disgusted');
 			card4.addEventListener( 'click', function() {
@@ -544,9 +559,14 @@ var utcDate = dt.toUTCString();
   			disgustFlipped = true; 
 			});
 			function flipDisgust() {
-			card4.classList.toggle('is-flipped');
-  			getAdvice4();
-  			disgustFlipped = true; 
+			setTimeout(
+  					() => {
+    				card4.classList.toggle('is-flipped');
+  					getAdvice4();
+  					disgustFlipped = true;  
+  					},
+  					2 * 1000
+					);
 			}
 			var card5 = document.querySelector('#happy');
 			card5.addEventListener( 'click', function() {
@@ -555,9 +575,14 @@ var utcDate = dt.toUTCString();
   			happinessFlipped = true;  
 			});
 			function flipHappiness() {
-			card5.classList.toggle('is-flipped');
-  			getAdvice5();
-  			happinessFlipped = true; 
+			setTimeout(
+  					() => {
+    				card5.classList.toggle('is-flipped');
+  					getAdvice5();
+  					happinessFlipped = true; 
+  					},
+  					2 * 1000
+					);
 			}
 			var card6 = document.querySelector('#fearful');
 			card6.addEventListener( 'click', function() {
@@ -566,9 +591,14 @@ var utcDate = dt.toUTCString();
   			fearFlipped = true;  
 			});
 			function flipFear() {
-			card6.classList.toggle('is-flipped');
-  			getAdvice6();
-  			fearFlipped = true; 
+			setTimeout(
+  					() => {
+    				card6.classList.toggle('is-flipped');
+  					getAdvice6();
+  					fearFlipped = true;  
+  					},
+  					2 * 1000
+					);
 			}
 			
 				function getAdvice() {
