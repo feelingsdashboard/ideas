@@ -333,9 +333,9 @@ color: red;
 				<div id='emotion_chart'></div>
 			</div>
 			</div>
-							<div id="controls">
+			<div id="controls">
 				<input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
-				<input class="btn" type="button" value="Get Advice Based on Your Emotions" onclick="grabData()" id="startbutton2"></input>
+				<input class="btn" type="button" value="Get Advice Based on Your Emotions" onclick="timer()" id="startbutton2"></input>
 				<input class="btn" type="button" value="Reset" onclick="reset()" id="resetbutton"></input>
 			</div>
 			<ul id="tarot">
@@ -482,6 +482,9 @@ var utcDate = dt.toUTCString();
 			let sadnessFlipped = false;
 			let surpriseFlipped = false;
 			let happinessFlipped = false;
+			function timer() {
+			pizzaTimer(); 
+			}
 			function grabData() {
 			collectData = true;
 			document.getElementById('resetbutton').style.visibility = 'visible'; 
@@ -633,6 +636,7 @@ var utcDate = dt.toUTCString();
   					},
   					4 * 1000
 					);
+					grabData(); 
 				}
 			</script>
 			<script>
@@ -718,7 +722,6 @@ var utcDate = dt.toUTCString();
 					var cp = ctrack.getCurrentParameters();
 					var er = ec.meanPredict(cp);
 					if (er) {
-						pizzaTimer(); 
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
 							if (er[i].value > 0.4) {
