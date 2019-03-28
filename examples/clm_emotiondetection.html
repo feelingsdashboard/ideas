@@ -723,6 +723,14 @@ var utcDate = dt.toUTCString();
 					);
 					grabData(); 
 				}
+				function timeOut(){
+				setTimeout(
+  					() => {
+    				reset();  
+  					},
+  					90 * 1000
+					); 
+				}
 			</script>
 			<script>
 				var vid = document.getElementById('videoel');
@@ -851,6 +859,7 @@ var utcDate = dt.toUTCString();
 							document.getElementById('doughnut-chart').style.visibility = 'visible';
 							executeGraph();
 						    collectData = false;
+						    timeOut(); 
 						}
 						}
 					}
