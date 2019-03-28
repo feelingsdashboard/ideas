@@ -718,6 +718,7 @@ var utcDate = dt.toUTCString();
 					var cp = ctrack.getCurrentParameters();
 					var er = ec.meanPredict(cp);
 					if (er) {
+						pizzaTimer(); 
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
 							if (er[i].value > 0.4) {
@@ -750,7 +751,6 @@ var utcDate = dt.toUTCString();
 							if (er[5].value > 0.4) {
 								showHappiness();  
 							}
-							pizzaTimer(); 
 							outputArray.push(er);
 							console.log(outputArray);
 							execute(); 
