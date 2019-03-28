@@ -282,6 +282,12 @@ color: red;
 	right: 30%; 
 	position: absolute; 
 }
+#sparkles {
+	visibility: hidden; 
+	top: 25%; 
+	right: 30%; 
+	position: absolute; 
+}
 		</style>
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
@@ -319,6 +325,7 @@ color: red;
   			<h6 id='facedetected'>Face Detected</h6>
   			</div>
   			<img id="pizzatimer" src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true">
+  			<img id="sparkles" src="https://media.giphy.com/media/3ov9k8fmDbIqzzbsLS/giphy.gif">
   			<canvas id="doughnut-chart" width="800" height="450"></canvas>
   			<div id="backup">
 			<div id="container">
@@ -636,10 +643,21 @@ var utcDate = dt.toUTCString();
 					setTimeout(
   					() => {
     				document.getElementById('pizzatimer').style.visibility = 'hidden';
-    				grabData(); 
+    				grabData();
+    				sparkles();  
   					},
   					4 * 1000
 					);
+				}
+				function sparkles(){
+				document.getElementById('sparkles').style.visibility = 'visible';
+					setTimeout(
+  					() => {
+    				document.getElementById('sparkles').style.visibility = 'hidden';
+  					},
+  					3 * 1000
+					);
+					grabData(); 
 				}
 			</script>
 			<script>
