@@ -270,6 +270,12 @@ color: red;
 #backupbutton {
 	background-color: rgba(255,255,255,0.6);
 }
+#doughnut-chart {
+	position: absolute; 
+	left: 25%; 
+	top: 25%; 
+	visibility: hidden; 
+}
 		</style>
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
@@ -378,24 +384,6 @@ color: red;
 			</div>
 			</li>
 			</ul>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			<div id="footer">
 				<input class="btn" type="button" value="backup" onclick="showBackup()" id="backupbutton"></input><br>
 				<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxdJPu02SeM7C5kGSGbqe0Dm6j_MLazsXLnBuUvx0JsTqksUdksP5bXnWJ3DD3tSKEw2BTX0YdzXMg/pubhtml?gid=0&single=true">Data Spreadsheet</a>
@@ -454,6 +442,7 @@ var utcDate = dt.toUTCString();
     gapi.auth2.init({client_id: "808437262220-pv5crjti3g4c2fr6v0cres010b592ams.apps.googleusercontent.com"});
   });
   function executeGraph() {
+  import Chart from 'chart.js';
   new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
     data: {
@@ -475,9 +464,6 @@ var utcDate = dt.toUTCString();
 });
 	}
 </script>
-
-
-
 			<script>
 			let collectData = false;
 			const outputArray = []; 
@@ -581,6 +567,7 @@ var utcDate = dt.toUTCString();
 					document.getElementById('happy').style.visibility = 'hidden';
 					document.getElementById('fearful').style.visibility = 'hidden';
 					document.getElementById('backup').style.visibility = 'hidden';
+					document.getElementById('doughnut-chart').style.visibility = 'hidden';
 				if (angerFlipped) {
 					card1.classList.toggle('is-flipped');
 					angerFlipped = false; 
@@ -755,6 +742,7 @@ var utcDate = dt.toUTCString();
 							outputArray.push(er);
 							console.log(outputArray);
 							execute(); 
+							document.getElementById('doughnut-chart').style.visibility = 'visible';
 							executeGraph();
 						    collectData = false;
 						}
