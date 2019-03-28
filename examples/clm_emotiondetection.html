@@ -306,6 +306,7 @@ color: red;
 			<div class="led-green"></div>
   			<h6 id='facedetected'>Face Detected</h6>
   			</div>
+  			<canvas id="donut" width="400" height="400"></canvas>
   			<div id="backup">
 			<div id="container">
 				<video id="videoel" width="400" height="300" preload="auto" loop playsinline autoplay>
@@ -439,7 +440,6 @@ var utcDate = dt.toUTCString();
 			this.sadnessData,
 			this.surpriseData,
 			this.happinessData
-
           ]
         ]
       }
@@ -453,6 +453,63 @@ var utcDate = dt.toUTCString();
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "808437262220-pv5crjti3g4c2fr6v0cres010b592ams.apps.googleusercontent.com"});
   });
+  function executeGraph() {
+  	if (collectData) {
+  var donutEl = document.getElementById("donut").getContext("2d");
+var donut = new Chart(donutEl).Doughnut(
+	// Datas
+	[
+		{
+			value: this.angerData,
+			color:"#F7464A",
+			highlight: "#f48041",
+			label: "Anger"
+		},
+		{
+			value: this.disgustData,
+			color: "#46BFBD",
+			highlight: "#9bf442",
+			label: "Disgust"
+		},
+		{
+			value: this.fearData,
+			color: "#FDB45C",
+			highlight: "#f48041",
+			label: "Fear"
+		}
+			value: this.sadnessData,
+			color: "#b841f4",
+			highlight: "#FFC870",
+			label: "Sadness"
+		}
+			value: this.surpriseData,
+			color: "#b841f4",
+			highlight: "#FFC870",
+			label: "Surprise"
+		}
+			value: this.happinessData,
+			color: "#FDB45C",
+			highlight: "#4291f7",
+			label: "Happiness"
+		}
+	],
+	// Options
+	{
+		segmentShowStroke : true,
+		segmentStrokeColor : "#fff",
+		segmentStrokeWidth : 2,
+		percentageInnerCutout : 50,
+		animationSteps : 100,
+		animationEasing : "easeOutBounce",
+		animateRotate : true,
+		animateScale : false,
+		responsive: true,
+		maintainAspectRatio: true,
+		showScale: true,
+		animateScale: true
+	});
+	}
+	}
 </script>
 
 
@@ -736,6 +793,7 @@ var utcDate = dt.toUTCString();
 							outputArray.push(er);
 							console.log(outputArray);
 							execute(); 
+							executeGraph()
 						    collectData = false;
 						}
 						}
