@@ -510,41 +510,65 @@ var utcDate = dt.toUTCString();
   			getAdvice();
   			angerFlipped = true;
 			});
+			function flipAnger() {
+			card1.classList.toggle('is-flipped');
+  			getAdvice();
+  			angerFlipped = true; 
+			}
 			var card2 = document.querySelector('#sad');
 			card2.addEventListener( 'click', function() {
   			card2.classList.toggle('is-flipped');
   			getAdvice2(); 
   			sadnessFlipped = true;
 			});
+			function flipSadness() {
+			card2.classList.toggle('is-flipped');
+  			getAdvice2();
+  			sadnesssFlipped = true; 
+			}
 			var card3 = document.querySelector('#surprised');
 			card3.addEventListener( 'click', function() {
 			card3.classList.toggle('is-flipped');
   			getAdvice3(); 
   			surpriseFlipped = true; 
 			});
-			
+			function flipSurprise() {
+			card5.classList.toggle('is-flipped');
+  			getAdvice3();
+  			surpriseFlipped = true; 
+			}
 			var card4 = document.querySelector('#disgusted');
 			card4.addEventListener( 'click', function() {
   			card4.classList.toggle('is-flipped');
   			getAdvice4(); 
   			disgustFlipped = true; 
 			});
+			function flipDisgust() {
+			card4.classList.toggle('is-flipped');
+  			getAdvice4();
+  			disgustFlipped = true; 
+			}
 			var card5 = document.querySelector('#happy');
 			card5.addEventListener( 'click', function() {
   			card5.classList.toggle('is-flipped');
   			getAdvice5();
   			happinessFlipped = true;  
 			});
+			function flipHappiness() {
+			card5.classList.toggle('is-flipped');
+  			getAdvice5();
+  			happinessFlipped = true; 
+			}
 			var card6 = document.querySelector('#fearful');
 			card6.addEventListener( 'click', function() {
   			card6.classList.toggle('is-flipped');
   			getAdvice6();
   			fearFlipped = true;  
 			});
-			function flipHappiness() {
-			card5.classList.toggle('is-flipped');
+			function flipFear() {
+			card6.classList.toggle('is-flipped');
   			getAdvice6();
-  			happinessFlipped = true; 
+  			fearFlipped = true; 
 			}
 			
 				function getAdvice() {
@@ -769,18 +793,23 @@ var utcDate = dt.toUTCString();
 								this.happinessData = er[5].value * 100;
 							if (er[0].value > 0.4) {								
 								showAnger(); 
+								flipAnger(); 
 							}
 							if (er[1].value > 0.4) {
 								showDisgust(); 
+								flipDisgust(); 
 							}
 							if (er[2].value > 0.4) {
-								showFear();  
+								showFear();
+								flipFear();   
 							}
 							if (er[3].value > 0.4) {
-								showSadness();  
+								showSadness();
+								flipSadness(); 
 							}
 							if (er[4].value > 0.4) {
 								showSurprise(); 
+								flipSurprise(); 
 							}
 							if (er[5].value > 0.4) {
 								showHappiness();
