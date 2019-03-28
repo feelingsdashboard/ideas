@@ -530,7 +530,7 @@ var utcDate = dt.toUTCString();
   			disgustFlipped = true; 
 			});
 			var card5 = document.querySelector('#happy');
-			card5.addEventListener( 'click', function() {
+			function flipHappiness() {
   			card5.classList.toggle('is-flipped');
   			getAdvice5();
   			happinessFlipped = true;  
@@ -778,7 +778,14 @@ var utcDate = dt.toUTCString();
 								showSurprise(); 
 							}
 							if (er[5].value > 0.4) {
-								showHappiness();  
+								showHappiness();
+								setTimeout(
+  									() => {
+    								flipHappiness(); 
+  									},
+  								4 * 1000
+								);
+							}  
 							}
 							outputArray.push(er);
 							console.log(outputArray);
