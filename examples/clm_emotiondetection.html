@@ -276,6 +276,9 @@ color: red;
 	top: 20%; 
 	visibility: hidden; 
 }
+#pizzatimer {
+	visibility: hidden; 
+}
 		</style>
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
@@ -312,6 +315,7 @@ color: red;
 			<div class="led-green"></div>
   			<h6 id='facedetected'>Face Detected</h6>
   			</div>
+  			<img id="pizzatimer" src="https://github.com/milesccoleman/ideas/blob/master/original.gif?raw=true">
   			<canvas id="doughnut-chart" width="800" height="450"></canvas>
   			<div id="backup">
 			<div id="container">
@@ -621,7 +625,15 @@ var utcDate = dt.toUTCString();
 				function unIndicateFace(){
 				document.getElementById('indicator').style.visibility = 'hidden';
 				}
-				
+				function pizzaTimer(){
+				document.getElementById('pizzatimer').style.visibility = 'visible';
+					setTimeout(
+  					() => {
+    				document.getElementById('pizzatimer').style.visibility = 'hidden';
+  					},
+  					4 * 1000
+					);
+				}
 			</script>
 			<script>
 				var vid = document.getElementById('videoel');
@@ -738,6 +750,7 @@ var utcDate = dt.toUTCString();
 							if (er[5].value > 0.4) {
 								showHappiness();  
 							}
+							pizzaTimer(); 
 							outputArray.push(er);
 							console.log(outputArray);
 							execute(); 
