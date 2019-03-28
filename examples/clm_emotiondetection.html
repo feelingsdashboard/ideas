@@ -460,8 +460,8 @@ var utcDate = dt.toUTCString();
       labels: ["Anger", "Disgust", "Fear", "Sadness", "Surprise", "Happiness"],
       datasets: [
         {
-          label: "Population (millions)",
-          backgroundColor: ["#F7464A", "#46BFBD","#FDB45C","b841f4","#b841f4","#FDB45C"],
+          label: "Individual Emotions Detected",
+          backgroundColor: ["#F7464A", "#3FBF46","#EAE72E","#9514DB","#14C0DB","#387FF9"],
           data: [this.angerData,this.disgustData,this.fearData,this.sadnessData,this.surpriseData,this.happinessData]
         }
       ]
@@ -724,10 +724,8 @@ var utcDate = dt.toUTCString();
 						for (var i = 0;i < er.length;i++) {
 							if (er[i].value > 0.4) {
 								indicateFace(); 
-								//document.getElementById('icon'+(i+1)).style.visibility = 'visible';
 							} else {
 								unIndicateFace(); 
-								//document.getElementById('icon'+(i+1)).style.visibility = 'hidden';
 							}
 							if (collectData) {
 								this.angerData = er[0].value * 100; 
