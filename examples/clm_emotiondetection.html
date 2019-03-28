@@ -454,7 +454,6 @@ var utcDate = dt.toUTCString();
     gapi.auth2.init({client_id: "808437262220-pv5crjti3g4c2fr6v0cres010b592ams.apps.googleusercontent.com"});
   });
   function executeGraph() {
-  	if (collectData) {
   var donutEl = document.getElementById("donut").getContext("2d");
 var donut = new Chart(donutEl).Doughnut(
 	// Datas
@@ -511,7 +510,6 @@ var donut = new Chart(donutEl).Doughnut(
 		showScale: true,
 		animateScale: true
 	});
-	}
 	}
 </script>
 
