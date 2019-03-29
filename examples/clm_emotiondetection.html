@@ -406,7 +406,6 @@ color: red;
 				<input class="btn" type="button" value="backup" onclick="showBackup()" id="backupbutton"></input><br>
 				<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxdJPu02SeM7C5kGSGbqe0Dm6j_MLazsXLnBuUvx0JsTqksUdksP5bXnWJ3DD3tSKEw2BTX0YdzXMg/pubhtml?gid=0&single=true">Data Spreadsheet</a>
 			</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script>
 var dt = new Date();
 var utcDate = dt.toUTCString();
@@ -446,6 +445,7 @@ var utcDate = dt.toUTCString();
 			this.sadnessData,
 			this.surpriseData,
 			this.happinessData
+
           ]
         ]
       }
@@ -459,6 +459,9 @@ var utcDate = dt.toUTCString();
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "808437262220-pv5crjti3g4c2fr6v0cres010b592ams.apps.googleusercontent.com"});
   });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
   function executeGraph() {
   new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
