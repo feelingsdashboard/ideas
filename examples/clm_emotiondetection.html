@@ -389,7 +389,7 @@ color: red;
 			<div class="scene">
   			<div id="happy" class="card">
     			<div class="card__face">Happiness<p id="click"></p></div>
-   				<div class="card__face card__face--back"><p id="advice7"></p></div>
+   				<div class="card__face card__face--back"><p id="advice5"></p></div>
   			</div>
 			</div>
 			</li>
@@ -642,7 +642,7 @@ var utcDate = dt.toUTCString();
 					w3.getHttpObject("https://api.adviceslip.com/advice", function(data){
 					advice = data.slip.advice; 
 					//alert(advice)
-					document.getElementById('advice7').innerHTML = advice;
+					document.getElementById('advice6').innerHTML = advice;
 					});
 				}
 				function reset() {
