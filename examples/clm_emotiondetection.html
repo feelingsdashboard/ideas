@@ -815,7 +815,7 @@ var utcDate = dt.toUTCString();
 					if (er) {
 						updateData(er);
 						for (var i = 0;i < er.length;i++) {
-							if (er[i].value > 0.4) {
+							if (er[i].value > 0.2) {
 								indicateFace(); 
 							} else {
 								unIndicateFace(); 
@@ -827,27 +827,27 @@ var utcDate = dt.toUTCString();
 								this.sadnessData = er[3].value * 100;
 								this.surpriseData = er[4].value * 100;
 								this.happinessData = er[5].value * 100;
-							if (er[0].value > 0.4) {								
+							if (er[0].value > 0.2) {								
 								showAnger(); 
 								flipAnger(); 
 							}
-							if (er[1].value > 0.4) {
+							if (er[1].value > 0.2) {
 								showDisgust(); 
 								flipDisgust(); 
 							}
-							if (er[2].value > 0.4) {
+							if (er[2].value > 0.2) {
 								showFear();
 								flipFear();   
 							}
-							if (er[3].value > 0.4) {
+							if (er[3].value > 0.2) {
 								showSadness();
 								flipSadness(); 
 							}
-							if (er[4].value > 0.4) {
+							if (er[4].value > 0.2) {
 								showSurprise(); 
 								flipSurprise();  
 							}
-							if (er[5].value > 0.4) {
+							if (er[5].value > 0.2) {
 								showHappiness();
 								flipHappiness();   
 							}
