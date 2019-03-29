@@ -583,7 +583,7 @@ var utcDate = dt.toUTCString();
 			setTimeout(
   					() => {
     				card5.classList.toggle('is-flipped');
-  					getAdvice7();
+  					getAdvice5();
   					},
   					35 * 100
 					);
@@ -638,7 +638,7 @@ var utcDate = dt.toUTCString();
 					//alert(advice)
 					document.getElementById('advice5').innerHTML = advice;
 					});
-				}function getAdvice7() {
+				}function getAdvice6() {
 					w3.getHttpObject("https://api.adviceslip.com/advice", function(data){
 					advice = data.slip.advice; 
 					//alert(advice)
