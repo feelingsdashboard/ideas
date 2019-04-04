@@ -511,7 +511,7 @@ var utcDate = dt.toUTCString();
 			let surpriseFlipped = false;
 			let happinessFlipped = false;
 			function timer() {
-			pizzaTimer(); 
+			floppyTimer(); 
 			reset();
 			}
 			function grabData() {
@@ -722,11 +722,11 @@ var utcDate = dt.toUTCString();
 				function unIndicateFace(){
 				document.getElementById('indicator').style.visibility = 'hidden';
 				}
-				function pizzaTimer(){
-				document.getElementById('pizzatimer').style.visibility = 'visible';
+				function floppyTimer(){
+				document.getElementById('floppyTimer').style.visibility = 'visible';
 					setTimeout(
   					() => {
-    				document.getElementById('pizzatimer').style.visibility = 'hidden';
+    				document.getElementById('floppyTimer').style.visibility = 'hidden';
     				grabData();
     				sparkles();  
   					},
